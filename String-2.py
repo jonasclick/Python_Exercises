@@ -6,5 +6,18 @@
 def character_frequency(string):
     result = {}
 
-    for i in string:
-        
+    lower_case_string = string.lower()
+
+    for i in lower_case_string:
+        if i in result:
+            result[i] += 1
+        else:
+            result[i] = 1
+    
+    print(result.keys())
+
+    return result
+
+print(character_frequency("Sali zäme, alles klar bi eu?"))
+
+
